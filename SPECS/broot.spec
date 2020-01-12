@@ -1,0 +1,49 @@
+%global debug_package %{nil}
+
+Name:           broot
+Version:        0.11.8
+Release:        1%{?dist}
+Summary:        A better way to navigate directories
+Group:          Applications/System
+License:        GPLv2
+URL:            https://github.com/Canop/%{name}
+BuildRequires:  cmake, cargo, rust
+Source:         https://github.com/Canop/%{name}/archive/v%{version}.tar.gz
+
+%description
+Get an overview of a directory, even a big one
+Find a directory then cd to it
+Never lose track of file hierarchy while you search
+Manipulate your files
+Apply a standard or personal shortcut to a file
+Replace ls (and its clones)
+See what takes space
+
+
+%prep
+%setup -q -n %{name}-%{version}
+
+
+%build
+cargo build --release
+
+
+%install
+rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/bin
+cp target/release/broot %{buildroot}/usr/bin/
+
+
+%clean
+rm -rf %{buildroot}
+
+
+%files
+%defattr(-,root,root,-)
+%doc LICENSE* *.md
+/usr/bin/broot
+
+
+%changelog
+* Mon Jan 13 2020 Jamie Curnow <jc@jc21.com> - 0.11.8-1
+- Initial spec

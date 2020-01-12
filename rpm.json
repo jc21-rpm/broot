@@ -1,0 +1,7 @@
+{
+  "publish": {
+    "PACKAGE": "broot",
+    "GH_USER": "jc21-rpm",
+    "VERSION": "0.11.8"
+  }
+}
