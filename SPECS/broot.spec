@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           broot
-Version:        0.11.8
+Version:        0.11.9
 Release:        1%{?dist}
 Summary:        A better way to navigate directories
 Group:          Applications/System
@@ -19,24 +19,19 @@ Apply a standard or personal shortcut to a file
 Replace ls (and its clones)
 See what takes space
 
-
 %prep
 %setup -q -n %{name}-%{version}
 
-
 %build
 cargo build --release
-
 
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/bin
 cp target/release/broot %{buildroot}/usr/bin/
 
-
 %clean
 rm -rf %{buildroot}
-
 
 %files
 %defattr(-,root,root,-)
@@ -45,5 +40,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Jan 16 2020 Jamie Curnow <jc@jc21.com> - 0.11.9-1
+- https://github.com/Canop/broot/releases/tag/v0.11.9
+
 * Mon Jan 13 2020 Jamie Curnow <jc@jc21.com> - 0.11.8-1
 - Initial spec
