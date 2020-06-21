@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           broot
-Version:        0.15.1
+Version:        0.16.0
 Release:        1%{?dist}
 Summary:        A better way to navigate directories
 Group:          Applications/System
@@ -40,6 +40,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Mon Jun 22 2020 Jamie Curnow <jc@jc21.com> - 0.16.0-1
+- https://github.com/Canop/broot/releases/tag/v0.16.0
+
 * Mon Jun 15 2020 Jamie Curnow <jc@jc21.com> - 0.15.1-1
 - https://github.com/Canop/broot/releases/tag/v0.15.1
 
