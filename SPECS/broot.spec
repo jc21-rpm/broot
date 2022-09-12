@@ -2,7 +2,7 @@
 
 Name:           broot
 Version:        1.14.1
-Release:        1%{?dist}
+Release:        1
 Summary:        A better way to navigate directories
 Group:          Applications/System
 License:        GPLv2
