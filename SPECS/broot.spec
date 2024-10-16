@@ -39,6 +39,9 @@ rm -rf %{buildroot}
 /usr/bin/broot
 
 %changelog
+* Thu Oct 17 2024 Jamie Curnow <jc@jc21.com> - 1.44.1-1
+- https://github.com/Canop/broot/releases/tag/v1.44.1
+
 * Tue Jun 25 2024 Jamie Curnow <jc@jc21.com> - 1.39.0-1
 - https://github.com/Canop/broot/releases/tag/v1.39.0
 
